@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Payment\PaymentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Service Container
+
+Route::get('/payment',[PaymentController::class, 'pay']);
+
+// Service Container end
+
